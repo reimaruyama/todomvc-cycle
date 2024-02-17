@@ -18,35 +18,32 @@
     }
   ],
   "dependencies": {
-    "@cycle/collection": "^0.3.0",
-    "@cycle/dom": "10.0.0-rc33",
-    "@cycle/history": "^4.0.0",
-    "@cycle/isolate": "1.4.x",
-    "@cycle/storage": "3.0.0-rc2",
-    "@cycle/xstream-run": "3.0.0",
-    "history": "^3.0.0",
-    "todomvc-app-css": "2.0.3",
-    "todomvc-common": "1.0.1",
-    "xstream": "^5.0.5"
+    "@cycle/dom": "^23.1.0",
+    "@cycle/run": "^5.7.0",
+    "@cycle/state": "1.7.0",
+    "@cycle/isolate": "5.2.0",
+    "@cycle/storage": "5.1.2",
+    "@cycle/history": "9.0.0",
+    "html-webpack-plugin": "5.6.0",
+    "ts-loader": "^9.5.1",
+    "webpack": "5.89.0",
+    "webpack-bundle-analyzer": "4.10.1",
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4",
+    "webpack-cli": "5.1.4",
+    "xstream": "^11.14.0",
+    "todomvc-common": "1.0.5",
+    "todomvc-app-css": "2.4.3",
+    "mini-css-extract-plugin": "2.8.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.6.5",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-register": "^6.4.3",
-    "babelify": "^7.2.0",
-    "browserify": "12.0.1",
-    "live-server": "^0.9.0",
-    "mkdirp": "^0.5.1",
-    "npm-run-all": "^1.4.0",
-    "uglify-js": "2.6.1",
-    "watchify": "^3.6.1"
+      "typescript": "^5.3.3",
+      "webpack-dev-server": "4.15.1",
+      "ts-node": "10.9.2"
   },
   "scripts": {
-    "build-debug": "mkdirp js && browserify src/app.js -t babelify --outfile js/app.js",
-    "watch:js": "mkdirp js && watchify src/app.js -t babelify --outfile js/app.js -dv",
-    "serve": "live-server ./",
-    "uglify": "uglifyjs js/app.js -o js/app.min.js",
-    "build": "npm run build-debug && npm run uglify",
-    "start": "npm-run-all --parallel watch:js serve"
+    "serve": "yarn webpack serve",
+    "build": "echo 'to be implemented'",
+    "start": "echo 'to be implemented'"
   }
 }
